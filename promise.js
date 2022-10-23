@@ -34,3 +34,23 @@ p1.then(data=>{
 .then(data=>{
 	console.log(data)
 })
+
+
+
+
+
+// multiple handler
+
+let p2 = new Promise((resolve, reject) => {
+	setTimeout(() => {
+		console.log("promise done")
+		resolve(69)
+	},6900)
+})
+
+p2.then(data => {
+	console.log('promoise resolved ' + data)
+})
+p2.then(data => {
+	console.log('adding multiple then statment is allowed ')
+})
